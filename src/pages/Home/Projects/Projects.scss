@@ -1,0 +1,43 @@
+.projects {
+  grid-area: 3/2;
+  display: grid;
+  gap: 2.5rem;
+  padding: 5rem 0;
+  
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &__projects-list {
+    display: grid;
+    gap: 2.5rem;
+  }
+  
+  &__project {
+    display: grid;
+    gap: 1.25rem;
+  }
+  
+  &__project-text {
+    display: grid;
+    gap: 0.25rem;
+    text-transform: uppercase;
+  }
+  
+  &__project-title {
+    font-size: 1.5rem;
+    line-height: 1.33;
+  }
+  
+  &__tools {
+    display: flex;
+    gap: 1.15rem;
+  }
+  
+  &__buttons {
+    display: flex;
+    gap: 2rem;
+  }
+}

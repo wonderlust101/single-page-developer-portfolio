@@ -1,0 +1,16 @@
+.form {
+  display: grid;
+  gap: 2rem;
+  justify-items: flex-end;
+  
+  &__fieldset {
+    display: grid;
+    width: 100%;
+    gap: 2rem;
+    border: none;
+    
+    @include breakpoint(medium) {
+      gap: 1.75rem;
+    }
+  }
+}

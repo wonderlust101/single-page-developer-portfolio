@@ -1,6 +1,46 @@
 @use '../abstract/index' as a;
 
 h1, h2, h3, h4,
-h5, h6, p {
+h5, h6, p, a, button, label, input {
+  font-family: 'Space Grotesk', sans-serif;
+  color: a.$clr-white;
+}
 
+h1 {
+  font-size: 1.5rem;
+  letter-spacing: -0.02775rem;
+
+  @include a.breakpoint(medium) {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+
+  @include a.breakpoint(medium) {
+    font-size: 4.5rem;
+  }
+  
+  @include a.breakpoint(large) {
+    font-size: 5.5rem;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+  letter-spacing: -0.0625rem;
+  line-height: 1.25;
+  
+  @include a.breakpoint(medium) {
+    font-size: 3rem;
+    letter-spacing: -0.09375rem;
+  }
+}
+
+p, input {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.55;
+  color: a.$clr-light-grey;
 }

@@ -1,0 +1,29 @@
+.hero {
+  grid-area: 1/2;
+  display: grid;
+  justify-items: center;
+  gap: 2.5rem;
+  margin-bottom: 5rem;
+  
+  &__main {
+    grid-area: 2/1;
+    display: grid;
+    justify-items: center;
+    gap: 4rem;
+    text-align: center;
+  }
+  
+  &__text{
+    display: grid;
+    gap: 2.25rem;
+    
+    &--underline {
+      text-decoration: underline 4px $clr-green;
+    }
+  }
+  
+  &__image {
+    grid-area: 1/1;
+    width: 60%;
+  }
+}

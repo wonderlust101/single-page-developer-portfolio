@@ -1,0 +1,26 @@
+.header {
+  position: absolute;
+  width: 100%;
+
+  &__content {
+    grid-area: 1/2;
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem 0;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 1rem;
+
+    & > * {
+      color: $clr-white;
+      cursor: pointer;
+      transition: 0.15s;
+
+      &:hover {
+        color: $clr-green;
+      }
+    }
+  }
+}

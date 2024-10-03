@@ -1,0 +1,18 @@
+.skills {
+  grid-area: 2/2;
+  text-align: center;
+  padding: 2.5rem 0;
+  border-top: 1px solid $clr-white;
+  border-bottom: 1px solid $clr-white;
+  
+  &__list {
+    display: grid;
+    gap: 1.5rem;
+    list-style: none;
+  }
+  
+  &__skill {
+    display: grid;
+    gap: 0.25rem;
+  }
+}
