@@ -61,15 +61,17 @@ export default function Projects() {
                 {projects.map((project, index) => (
                     <li key={index} className="projects__project">
                         <img
+                            className="projects__project-img"
                             src={`/images/thumbnail-project-${index + 1}-large.webp`}
-                            alt={`Preview of ${project.title}`}/>
-
-                        <div className='projects__project-text'>
-                            <h3 className='projects__project-title'>{project.title}</h3>
+                            alt={`Preview of ${project.title}`}
+                        />
+                        
+                        <div className="projects__project-text">
+                            <h3 className="projects__project-title">{project.title}</h3>
 
                             <ul className="projects__tools">
                                 {project.tools.map((tool) => (
-                                    <li><p className='projects__project-tools'>{tool}</p></li>
+                                    <li><p className="projects__project-tools">{tool}</p></li>
                                 ))}
                             </ul>
                         </div>

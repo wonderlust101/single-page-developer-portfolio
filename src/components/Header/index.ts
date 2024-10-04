@@ -1,3 +1,3 @@
-import Header from "./Header.tsx";
+import Header from "./Header";
 
 export default Header;

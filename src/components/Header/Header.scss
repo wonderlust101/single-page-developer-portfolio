@@ -4,9 +4,16 @@
 
   &__content {
     grid-area: 1/2;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
     padding: 2.5rem 0;
+    
+    @include breakpoint(medium) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__nav {

@@ -4,12 +4,28 @@
   &__content {
     grid-area: 1/2;
     text-align: center;
+    
+    @include breakpoint(large) {
+      text-align: left;
+    }
   }
   
   &__form {
     display: grid;
     gap: 3rem;
     padding: 3.75rem 0 5.5rem;
+    
+    @include breakpoint(medium) {
+      width: 70%;
+      margin: 0 auto;
+    }
+    
+    @include breakpoint(large) {
+      grid-template-columns: 1fr 1fr;
+      gap: 14rem;
+      width: 100%;
+      margin: unset;
+    }
   }
   
   &__text {
@@ -23,6 +39,11 @@
     align-items: center;
     gap: 1.5rem;
     padding: 2.5rem 0 3.75rem;
+    
+    @include breakpoint(medium) {
+      justify-content: space-between;
+      flex-direction: row;
+    }
   }
   
   &__nav {

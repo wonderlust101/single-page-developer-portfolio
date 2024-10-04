@@ -5,10 +5,23 @@
   border-top: 1px solid $clr-white;
   border-bottom: 1px solid $clr-white;
   
+  @include breakpoint(medium) {
+    text-align: left;
+    border-bottom: unset;
+  }
+  
   &__list {
     display: grid;
     gap: 1.5rem;
     list-style: none;
+    
+    @include breakpoint(medium) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint(large) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
   
   &__skill {

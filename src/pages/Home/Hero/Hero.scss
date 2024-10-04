@@ -4,26 +4,65 @@
   justify-items: center;
   gap: 2.5rem;
   margin-bottom: 5rem;
-  
+
+  @include breakpoint(medium) {
+    grid-area: 1/2 / 1 / 4;
+    justify-items: flex-start;
+  }
+
   &__main {
     grid-area: 2/1;
     display: grid;
     justify-items: center;
     gap: 4rem;
     text-align: center;
+
+    @include breakpoint(medium) {
+      margin-top: 10rem;
+      text-align: left;
+      align-self: center;
+      justify-items: flex-start;
+      grid-area: 1/1;
+      z-index: 1;
+    }
+    
+    @include breakpoint(medium) {
+      margin-top: unset;
+    }
   }
-  
-  &__text{
+
+  &__text {
     display: grid;
     gap: 2.25rem;
-    
+
     &--underline {
       text-decoration: underline 4px $clr-green;
     }
   }
-  
+
+  &__header {
+    @include breakpoint(medium) {
+      max-width: 65%;
+    }
+  }
+
+  &__body {
+    @include breakpoint(medium) {
+      max-width: 50%;
+    }
+  }
+
   &__image {
     grid-area: 1/1;
-    width: 60%;
+    width: 70%;
+
+    @include breakpoint(medium) {
+      width: min(50%, 60rem);
+      justify-self: flex-end;
+    }
+
+    & > * {
+      width: 100%;
+    }
   }
 }

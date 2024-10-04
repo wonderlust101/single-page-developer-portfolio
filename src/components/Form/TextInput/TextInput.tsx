@@ -1,5 +1,5 @@
 import React from "react";
-import './TextInput.scss'
+import "./TextInput.scss";
 
 type TextInputProps = {
     id: string;
@@ -25,18 +25,24 @@ export default function TextInput({
                 <label className="text-input__label" htmlFor={id}>{label}</label> :
                 <label className="sr-only" htmlFor={id}>{label}</label>}
 
-            <input className={"text-input__field " + (status ? ('text-input__field--' + status) : '') + ` ${variant? variant: ''}`}
-                   id={id}
-                   type={type}
-                   placeholder={placeholder}
-                   aria-required={isRequired}
-                   required={isRequired}
-                   value={value}
-                   onChange={onChange}/>
-            
-            {icon ? <img className="text-input__error-icon" src={icon} alt="" role="presentation"/> : null}
+            <input
+                className={"text-input__field " + (status ? ("text-input__field--" + status) : "") + ` ${variant ? variant : ""}`}
+                id={id}
+                type={type}
+                placeholder={placeholder}
+                aria-required={isRequired}
+                required={isRequired}
+                value={value}
+                onChange={onChange}/>
 
-            {status === 'error' ? <p className="text-input__status">{errorText}</p> : null}
+            {icon ? (
+                status === "error" &&
+                <img className="text-area-input__error-icon" src={icon} alt="" role="presentation"/>
+            ) : (
+                <></>
+            )}
+            
+            {status === "error" ? <p className="text-input__status">{errorText}</p> : null}
         </div>
-    )
+    );
 }

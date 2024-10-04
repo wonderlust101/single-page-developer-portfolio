@@ -11,8 +11,8 @@ export default function Hero() {
         <section className="hero">
             <div className='hero__main'>
                 <div className='hero__text'>
-                    <h2>Nice to meet you! I'm <span className="hero__text--underline">Adam Keyes.</span></h2>
-                    <p>Based in the UK, I’m a front-end developer passionate about building accessible web apps that
+                    <h2 className='hero__header'>Nice to meet you! I'm <span className="hero__text--underline">Adam Keyes.</span></h2>
+                    <p className='hero__body'>Based in the UK, I’m a front-end developer passionate about building accessible web apps that
                         users love.</p>
                 </div>
                 
@@ -20,8 +20,8 @@ export default function Hero() {
             </div>
 
             <picture className='hero__image'>
-                <source srcSet={heroImageDesktop} media={"(min-width: 48rem)"}/>
-                <source srcSet={heroImageTablet} media={"(min-width: 80rem)"}/>
+                <source srcSet={heroImageDesktop} media={"(min-width: 80rem)"}/>
+                <source srcSet={heroImageTablet} media={"(min-width: 48rem)"}/>
                 <img src={heroImageMobile} alt=""/>
             </picture>
         </section>

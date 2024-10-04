@@ -13,11 +13,16 @@
   &__projects-list {
     display: grid;
     gap: 2.5rem;
+    
+    @include breakpoint(medium) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
   
   &__project {
     display: grid;
     gap: 1.25rem;
+    position: relative;
   }
   
   &__project-text {
@@ -39,5 +44,22 @@
   &__buttons {
     display: flex;
     gap: 2rem;
+    
+    @include breakpoint(large) {
+      grid-area: 1/1 / 2/1;
+      position: absolute;
+      display: grid;
+      justify-items: center;
+      align-content: center;
+      background-color: rgba(0,0,0, 0.75);
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      transition: 0.15s;
+      
+      &:hover {
+        opacity: 100%;
+      }
+    }
   }
 }
