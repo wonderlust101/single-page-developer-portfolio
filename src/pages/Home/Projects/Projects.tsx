@@ -49,7 +49,6 @@ const projects: project[] = [
 ];
 
 export default function Projects() {
-
     return (
         <section className="projects">
             <header className="projects__header">
@@ -60,12 +59,15 @@ export default function Projects() {
             <ul className="projects__projects-list">
                 {projects.map((project, index) => (
                     <li key={index} className="projects__project">
-                        <img
-                            className="projects__project-img"
-                            src={`/images/thumbnail-project-${index + 1}-large.webp`}
-                            alt={`Preview of ${project.title}`}
-                        />
-                        
+                        <picture>
+                            <source srcSet={`./images/thumbnail-project-${index + 1}-large.webp`} media='(min-width: 48rem)'/>
+                            <img
+                                className="projects__project-img"
+                                src={`./images/thumbnail-project-${index + 1}-small.webp`}
+                                alt={`Preview of ${project.title}`}
+                            />
+                        </picture>
+
                         <div className="projects__project-text">
                             <h3 className="projects__project-title">{project.title}</h3>
 
