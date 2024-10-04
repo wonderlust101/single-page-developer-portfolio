@@ -6,8 +6,27 @@
   margin-bottom: 5rem;
 
   @include breakpoint(medium) {
-    grid-area: 1/2 / 1 / 4;
+    grid-area: 1/2 / 1 /4;
     justify-items: flex-start;
+  }
+
+  @include breakpoint(large) {
+    grid-area: 1/2;
+  }
+
+  &:before {
+    content: url('/images/pattern-rings.svg');
+    position: absolute;
+    top: 16rem;
+    left: -20rem;
+
+    @include breakpoint(medium) {
+      left: -16rem;
+    }
+
+    @include breakpoint(large) {
+      left: -8rem;
+    }
   }
 
   &__main {
@@ -25,7 +44,7 @@
       grid-area: 1/1;
       z-index: 1;
     }
-    
+
     @include breakpoint(medium) {
       margin-top: unset;
     }
@@ -53,12 +72,27 @@
   }
 
   &__image {
+    display: block;
     grid-area: 1/1;
     width: 70%;
+    position: relative;
 
     @include breakpoint(medium) {
-      width: min(50%, 60rem);
+      width: min(50%, 40rem);
       justify-self: flex-end;
+    }
+
+    &:before {
+      content: url('/images/pattern-circle.svg');
+      position: absolute;
+      bottom: -0.5rem;
+      left: 110%;
+
+      @include breakpoint(medium) {
+        left: 0%;
+        bottom: 8rem;
+        transform: translate(-50%);
+      }
     }
 
     & > * {

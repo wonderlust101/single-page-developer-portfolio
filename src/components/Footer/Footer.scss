@@ -1,5 +1,22 @@
 .footer {
   background-color: $clr-dark-grey;
+  position: relative;
+
+  &:before {
+    content: url('/images/pattern-rings.svg');
+    position: absolute;
+    bottom: 30%;
+    left: -4rem;
+    transform: translate(-50%);
+    
+    @include breakpoint(medium) {
+      left: -8rem;
+    }
+
+    @include breakpoint(medium) {
+      left: 0;
+    }
+  }
 
   &__content {
     grid-area: 1/2;
@@ -31,6 +48,10 @@
   &__text {
     display: grid;
     gap: 1.25rem;
+    
+    @include breakpoint(large) {
+      align-content: flex-start;
+    }
   }
 
   &__links {
