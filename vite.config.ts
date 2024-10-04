@@ -12,6 +12,5 @@ export default defineConfig({
             }
         }
     },
-    // TODO: Change to git repository
-    // base   : "//" 
+    base   : "/single-page-developer-portfolio/" 
 });
